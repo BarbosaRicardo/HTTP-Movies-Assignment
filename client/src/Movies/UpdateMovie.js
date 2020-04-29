@@ -25,10 +25,10 @@ const UpdateMovie = props => {
         }
 
         Axios.put(`http://localhost:5000/api/movies/${props.match.params.id}`, movieFormatter)
-        .then(reponse => {
-            console.log(reponse);
+        .then(response => {
+            console.log(response);
             document.querySelector('form').reset();
-            props.history.push("/")
+            // props.history.push("/") //refresh
         })
         .catch( error => {
             console.log(error);
